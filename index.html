@@ -1,39 +1,36 @@
-<DOCTYPE html>
-<html>
+<!DOCTYPE html>
 
+<html>
 	<head>
-	
-		<title>G221210045</title>
-	
+		<title>Giriş Sayfası</title>
 		<meta charset ="UTF-8">
-		<link rel="stylesheet" href="style.css">
-		
+		<link rel="stylesheet" href="styleLogin.css">
+
+        <style>
+            body{
+                background-image:url('https://e1.pxfuel.com/desktop-wallpaper/581/154/desktop-wallpaper-backgrounds-for-login-page-login-page.jpg');
+                background-repeat:no-repeat;
+                background-size:cover;
+                 height:728px;
+            }
+        </style>
+
 	</head>
 
 	<body>
-		
-		<div class="navbar">
-			<table class="navbar" width=100%>
-				<tr>
-					<th><a href="#">Giriş Sayfası</a></th>
-					<th><a href="Memleketim.html">Memleketim</a></th>
-					<th><a href="Ozgecmis.html">Öz Geçmiş</a></th>
-					<th><a href="Hakkimda.html">Hakkımda</a></th>
-					<th><a href="İletisim.html">İletişim</a></th>
-				</tr>
-			</table>
-		</div>
-		
-		<div ><center><h2><p>HOŞGELDİNİZ...</p></h2></center></div>
-		
-		
-		<img src="">
-		<div>
-			<center><p>Konyaspor takımını görmek için tıklayınız</p></center>
-		</div>
-		
-		<center><table style="background-color:A4D0A4 "><tr><td><a style="text-decoration:none " href="kadro.html">Ks Kadro</a></td></tr></table></center>
 	
+			<center>
+				<div class="Giris">
+					<form method="POST" action="Login.php">
+					<h2 style="color:#FFF">Log-In Sayfası</h2>
+						<input type="email" placeholder="Email giriniz" name="username" class="txt">
+						<input type="password" placeholder="Şifrenizi giriniz" name="password" class="txt">
+						<input type="submit" value="Giriş Yap" class="btn-giris">
+					</form>
+					
+				</div>
+			</center>
+			
+            
 	</body>
-
 </html>

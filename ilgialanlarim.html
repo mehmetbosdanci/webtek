@@ -1,0 +1,75 @@
+<DOCTYPE html>
+<html>
+
+	<head>
+	
+		<title>Hakkımda</title>
+	
+		<meta charset ="UTF-8">
+		<link rel="stylesheet" href="style.css">
+		
+		<style>
+            body{
+                background-image:url('https://th.bing.com/th/id/OIG.xojy4FkDFs3Zxg3xsRQf?pid=ImgGn');
+                background-repeat:no-repeat;
+                background-size:cover;
+                
+                }    
+            .div3mini{
+                background-color:turquoise;
+                border-radius:10px;
+                margin:1rem;
+            }
+        </style>
+        <script src="ilgialanlarim.js"></script>
+	</head>
+
+	<body>
+		
+		<div class="navbar">
+			<table class="navbar" width=100%>
+				<tr>
+					<th><a href="anasayfa.html">Giriş Sayfası</a></th>
+					<th><a href="memleketim.html">Memleketim</a></th>
+					<th><a href="Ozgecmis.html">Öz Geçmiş</a></th>
+					<th><a href="#">İlgi Alanlarım</a></th>
+					<th><a href="iletisim.html">İletişim</a></th>
+				</tr>
+			</table>
+		</div>
+	
+		<div class="div3ana">
+			
+			<div class="div3mini" >
+				<center><h2>Ülke ve Bayrakları..</h2></center>
+                <div id="foto">
+                    <center><img id="bayrak" style="width:30%; border-radius:10px;"><p id="info"></p></center>
+                    
+                </div>
+				<center><button id="ara" onclick="ara()">Göster</button></center>
+			</div>
+            
+		</div>
+		
+         
+            
+          <script>
+              
+                function ara(){
+                
+                //ülkeler ve bayrakları
+                 fetch("https://restcountries.com/v3.1/all")
+                .then(data => data.json())   
+                .then(veri =>{
+                console.log(veri);
+                var rastgelesayi = Math.floor(Math.random() * veri.length);
+                document.getElementById("bayrak").src = veri[rastgelesayi].flags.png;
+                document.getElementById("info").innerHTML = "Yaygın İsmi:" + "<b>" + veri[rastgelesayi].name.common + "</b>" + "<br>Resmi İsmi:" + "<b>" +veri[rastgelesayi].name.official                  + "</b>" + "<br>Başkenti:<b>" + veri[rastgelesayi].capital + "</b>" + "<br>Bölge:<b>" + veri[rastgelesayi].region +"</b>" + "<br>Haftanın başlama günü:<b>" + veri                          [rastgelesayi].startOfWeek +"</b>";   
+            })
+            }
+          </script>      
+           
+	
+	</body>
+
+</html>

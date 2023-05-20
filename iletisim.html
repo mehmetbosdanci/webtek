@@ -1,60 +1,222 @@
 <DOCTYPE html>
-<html>
-
-	<head>
-	
-		<title>İletişim</title>
-	
-		<meta charset ="UTF-8">
-        <link rel="stylesheet" href="style.css">
-		<link rel="stylesheet" href="styleiletisim.css">
-		
-		<style>
-            body{
-                background-image:url('https://th.bing.com/th/id/OIG.xojy4FkDFs3Zxg3xsRQf?pid=ImgGn');
-                background-repeat:no-repeat;
-                background-size:cover;
-                background-image-position:center;
-                }    
+    <html>
     
-        </style>
-	</head>
-
-	<body>
-		
-		<div class="navbar">
-			<table class="navbar" width=100%>
-				<tr>
-					<th><a href="anasayfa.html">Giriş Sayfası</a></th>
-					<th><a href="memleketim.html">Memleketim</a></th>
-					<th><a href="Ozgecmis.html">Öz Geçmiş</a></th>
-					<th><a href="Hakkimda.html">Hakkımda</a></th>
-					<th><a href="#">İletişim</a></th>
-				</tr>
-			</table>
-		</div>
-        <center>
-            <table height=50% width=60% style="margin-left:15%;">
-                <tr>
-                    <td>
-                        <div class="container">
-                            <form >
-                                <h2 style="text-align:center; color:white;">İletişime Geç - Contact With Me</h2>
-                                <input type="text" placeholder="İsminiz..">
-
-                            
-                                <input type="text" placeholder="Soyisminiz..">
-
+        <head>
+        
+            <title>İletişim</title>
+        
+            <meta charset ="UTF-8">
+            <link rel="stylesheet" href="style.css">
+            
+            
+            <style>
+                body{
+                    background-image:url('https://th.bing.com/th/id/OIG.xojy4FkDFs3Zxg3xsRQf?pid=ImgGn');
+                    background-repeat:no-repeat;
+                    background-size:cover;
+                    
+                    }    
+                .tas{
+                    
+                    width:60%;
+                    background-color:#8D9CF4;
+                    margin-top:5%;
+                    border-radius:10px;
+                }
+                .masa{
+                    width:90%;
+                    background-color:#F29999;
+                    margin:1rem 1rem 0 1rem;       
+                    text-align:left;
+                    border-radius:10px;
+                }
+                
+                input[type="text"]{
+                    width:70%;
+                    height:2rem;
+                    
+                    text-align:center;
+                    border-radius:10px;
+                }
+                input[type="email"]{
+                    width:70%;
+                    height:2rem;
+                    
+                    text-align:center;
+                    border-radius:10px;
+                }
+                input[type="password"]{
+                    width:70%;
+                    height:2rem;
+                    
+                    text-align:center;
+                    border-radius:10px;
+                }
+                input[type="checkbox"]{
+                    width:1rem;
+                    height:1rem;
+                    
+                }
+                input[type="radio"]{
+                    width:1rem;
+                    height:1rem;
+                    
+                }
+                
+                .secenek{
+                    width:90%;
+                    background-color:#F29999;
+                    margin:0 1rem 1rem 1rem ;       
+                    border-radius:10px;
+                }
+                .checkbox-container {
+                    display: inline-block;
+                    margin-right: 80px;
+    
+                }
+            
+            </style>
+        </head>
+    
+        <body>
+            
+            <div class="navbar">
+                <table class="navbar" width=100%>
+                    <tr>
+                        <th><a href="anasayfa.html">Giriş Sayfası</a></th>
+                        <th><a href="memleketim.html">Memleketim</a></th>
+                        <th><a href="Ozgecmis.html">Öz Geçmiş</a></th>
+                        <th><a href="ilgialanlarim.html">İlgi Alanlarım</a></th>
+                        <th><a href="#">İletişim</a></th>
+                    </tr>
+                </table>
+            </div>
+            <center>
+                <div class="tas">
+                    <h2 style="text-align:center; color:white;">İletişime Geç - Contact With Me</h2>
+                     <form onsubmit="return Bosmu()" action="iletisim.php" method="post">
+                         <table class="masa">           
+                            <tr>
+                                <td>
+                                    <center>İsim:</center>
+                                </td>
+    
+                                <td>
+                                    <input type="text" placeholder="İsminizi girin" id="input1" name="input1">   
+                                </td>
+                            </tr>
+    
+                            <tr>
+                                <td>
+                                    <center>Email:</center>
+                                </td>
+    
+                                <td>
+                                    <input type="text" placeholder="Mailini girin" id="input2" name="input2">   
+                                </td>
+                            </tr>
+    
+                            <tr>
+                                <td>
+                                    <center>Şifre:</center>
+                                </td>
+    
+                                <td>
+                                    <input type="password" placeholder="Şifrenizi girin" id="input3" name="input3">   
+                                </td>
+                            </tr>
+    
                                 
-                                <textarea  placeholder="Açıklama Giriniz.." style="height:150px"></textarea>
-
-                                <center><input type="submit" value="Submit"></center>
-                            </form>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </center>
-	</body>
-
-</html>
+                         </table>  
+    
+                         
+                        
+                         <div class="secenek">
+    
+                                <div><center><p><b>Ne tür müziklerden hoşlanırsın:</b></p></center><hr></div>
+                                    <div class="checkbox-container">
+                                    
+                                    <input type="checkbox" name="selectedOptions[]" value="Pop"> Pop
+                                    </div>
+                                    <div class="checkbox-container">
+                                        
+                                    <input type="checkbox" name="selectedOptions[]" value="Rock"> Rock 
+                                    </div>
+                                    <div class="checkbox-container">
+                                    <input type="checkbox" name="selectedOptions[]" value="Hip-hop">  Hip-hop
+                                    </div>
+    
+                                <hr>
+                                <div><center><p><b>Site hakkındaki düşünceniz:</b></p></center><hr></div>
+                                    <div class="checkbox-container">
+                                    
+                                    <input type="radio" name="radio" id="input6" name="radio" value="Olumlu"> Olumlu
+                                    </div>
+                                    <div class="checkbox-container">
+                                        
+                                    <input type="radio" name="radio" id="input7" name="radio" value="Olumsuz"> Olumsuz
+                                    </div>
+                                    <div class="checkbox-container">
+                                    <input type="radio" name="radio" id="input8" name="radio" value="Kararsızım"> Kararsızım
+                                    </div> 
+                                <hr>
+                                <div><center><p><b>Hangi film türünü seversiniz:</b></p></center><hr></div>
+                                <select style="width:30%; height:30px;" id="input5" name="input5">
+                                    <option>Komedi</option>
+                                    <option>Drama</option>
+                                    <option>Aksiyon</option>
+                                </select>
+                                <hr>
+                                <div class="checkbox-container">
+                                    <textarea cols=25 rows=5 placeholder="Açıklama Giriniz.." id="input4" name="input4" style="resize: vertical;"></textarea>
+                                    </div>
+                                <hr>
+                                <div class="checkbox-container">
+                                    <div class="checkbox-container">
+                                    <input type="reset" value="Temizle">
+                                    </div>   
+                                    <input type="submit" value="Gönder">
+                                </div>    
+                         </div>
+                    </form>
+                        
+                </div>
+            </center>
+    
+            <script>
+            function Bosmu() {
+                var input1 = document.getElementById("input1").value;
+                var input2 = document.getElementById("input2").value;
+                var input3 = document.getElementById("input3").value;
+                var input4 = document.getElementById("input4").value;
+                var input5 = document.getElementById("input5").value;
+                var input6 = document.getElementById("input6");
+                var input7 = document.getElementById("input7");
+                var input8 = document.getElementById("input8");
+    
+                if (input1 === "" || input2 === "" || input3 === "" || input4 === "" || input5 === "") {
+                alert("Lütfen tüm alanları doldurun.");
+                return false; // Formun gönderilmesini engellemek için false döndürüyorum
+                }
+                //radiobuton kontrolü
+                if (input6.checked) {
+                    
+                } else if (input7.checked) {
+                    
+                } else if (input8.checked) {
+                    
+                } else {
+                    alert("Lütfen site hakkındaki düşüncenizi giriniz.");
+                }
+                //mail kontrolü
+                if (input2.endsWith("@sakarya.edu.tr")) {
+                    //alert("Değerlendirmeniz için teşekkürler.");
+                } else {
+                    alert("Lütfen @sakarya.edu.tr uzantılı bir e-posta adresi giriniz.");
+                    return false;  
+                }
+            }
+            </script>
+        </body>
+    
+    </html>
